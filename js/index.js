@@ -1,8 +1,10 @@
-const voitures = ["Renault Scénic", "Fiat 500", "Ford Escort"];
-console.log(voitures[0]);
-console.log(voitures[1]);
-console.log(voitures[2]);
+const voitures = ["Renault Scénic", "Fiat 500", "Ford Escort","Porsche 911","Citroën 2CV"];
+voitures.pop();
+//supprime le dernier
 console.log(voitures.length);
-for (let cptI = 0; cptI < voitures.length; cptI++) {
-console.log(voitures[cptI]);
+//supprime 2 éléments à partir de l'indice 1
+voitures.splice(1,2);
+console.log(voitures.length);
+for (const voiture of voitures) {
+console.log(voiture);
 }
