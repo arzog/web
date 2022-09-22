@@ -49,12 +49,16 @@ class MaVoiture {
         let carbConso = (this.conso/100)*distance;
         if(this.tank - carbConso <= 0) {
             console.warn("il reste " + Math.round(Matitine.tank*100)/100 + " litres de carburant");
-            if (prompt("Voulez-vous utiliser votre bidon ?","yes") === "yes"){
+            if (prompt("Voulez-vous utiliser votre bidon ?","yes").toLowerCase() === "yes"){
                 this.remplir(10);
                 this.tank -= carbConso;
              }else {
-                 console.log("j'espère que vous aimez marcher");
-                 return -1;
+                if(prompt("Voulez-vous utiliser la pompe ?","yes").toLowerCase()) {
+                    this.remplir(Number(prompt("Combien de litres voulez-vous mettre ?")));
+                } else {
+                    console.log("j'espère que vous aimez marcher");
+                    return -1;
+                }
              }
         } else {
             this.tank -= carbConso;
@@ -95,6 +99,7 @@ for (cptI= 1; cptI <= 15; cptI++) {
         break;
     }
 	Matitine.affiche();
+    console.log("boucle num :"+cptI);
 
     tmp++;   
 }
