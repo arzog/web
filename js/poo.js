@@ -101,4 +101,3 @@ for (cptI= 1; cptI <= 15; cptI++) {
 console.log("distance parcourue : "+Matitine.km + "Km");
 console.log("essence restant : "+Math.round(Matitine.tank*100)/100 + "L");
 Matitine.remplir(Number(prompt("Combien de litres voulez-vous mettre ?")));
-
