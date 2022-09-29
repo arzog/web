@@ -2,13 +2,29 @@
 <html>
     <head>
         <title>Prout</title>
-        <script src="./js/index.js"></script>
     </head>
 
     
     <body>
-        <h1>Prout</h1>
-        <h2>Je ré apprends à faire des pages web lul</h2>
-    </body>
+        <div id="menu">
+        <div class="item1">
+        <span>SPAN 1</span>
+        <span>SPAN 2</span>
+        </div>
+        <div class="item2">
+        <span> SPAN 3</span>
+        <span> SPAN 4</span>
+        </div>
+        </div>
+        </body>
+        <script>
+            let divs = document.querySelectorAll('div');
+            divs.forEach(div => {
+            console.log(div);
+            console.log(div.parentNode);
+            console.log(div.childNodes);
+            }
+            );
+        </script>
 
 </html>
