@@ -1,0 +1,21 @@
+.grid{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    column-gap: 25px;
+    row-gap: 25px;
+    grid-template-columns: 50% 50%;
+}
+
+.div1{
+    background-color: red;
+}
+.div2{
+    background-color: green;
+}
+.div3{
+    background-color: blue;
+}
+.div4{
+    background-color: yellow;
+}
